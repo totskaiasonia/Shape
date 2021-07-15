@@ -7,6 +7,8 @@ public:
     C_Circle();
     C_Circle(float pos_x, float pos_y, float square, char name, float radius);
 
+    //void save(FILE* pf) override;
+
     friend std::ostream& operator <<(std::ostream& out, const C_Circle& figure)
     {
         out << "Name: " << figure.name << "\tPosition: (" << figure.pos_x << ";" << figure.pos_y << ")\tSquare: " << figure.square << "\tRadius: " << figure.radius;

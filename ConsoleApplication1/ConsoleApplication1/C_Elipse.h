@@ -1,12 +1,14 @@
 #pragma once
 #include "C_Figure.h"
 #include"C_Rectangle.h"
-class C_Elipse :
+class C_Elipse final:
     public C_Figure
 {
 public:
     C_Elipse();
     C_Elipse(float pos_x, float pos_y, float square, char name, float height, float width);
+
+    //void save(FILE* pf) override;
 
     friend std::ostream& operator <<(std::ostream& out, const C_Elipse& figure)
     {
