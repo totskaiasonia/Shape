@@ -4,10 +4,10 @@ class C_Square :
     public C_Figure
 {
 protected:
-    int side_length;
+    float side_length;
 public:
     C_Square();
-    C_Square(int pos_x, int pos_y, float square, char name, int side_length);
+    C_Square(int pos_x, int pos_y, float square, char name, float side_length);
 
     void save(FILE* to);
     void load(FILE* from);

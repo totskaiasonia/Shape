@@ -36,7 +36,17 @@ void C_Figure::save(FILE* to)
 		strcpy_s(tmp, 100, "\n");
 		fputs(tmp, to);
 
+
+		int sq = this->square * 100;
+		int fr_part = sq % 100;
+
 		_itoa_s(this->square, tmp, 100, 10);
+		fputs(tmp, to);
+
+		tmp[0] = '.';
+		fputc(tmp[0], to);
+
+		_itoa_s(fr_part, tmp, 100, 10);
 		fputs(tmp, to);
 	}
 }

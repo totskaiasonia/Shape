@@ -19,6 +19,6 @@ public:
 		out << "Name: " << figure.name << "\tPosition: (" << figure.pos_x << ";" << figure.pos_y << ")\tSquare: " << figure.square;
 		return out;
 	}
-
+	 
 	virtual ~C_Figure();
 };
