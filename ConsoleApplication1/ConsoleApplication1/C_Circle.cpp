@@ -28,6 +28,9 @@ void C_Circle::save(FILE* to)
 
 	_itoa_s(fr_part, tmp, 100, 10);
 	fputs(tmp, to);
+
+	strcpy_s(tmp, 100, "\n");
+	fputs(tmp, to);
 }
 void C_Circle::load(FILE* from)
 {

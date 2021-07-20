@@ -28,6 +28,9 @@ void C_Rectangle::save(FILE* to)
 
 	_itoa_s(fr_part, tmp, 100, 10);
 	fputs(tmp, to);
+
+	strcpy_s(tmp, 100, "\n");
+	fputs(tmp, to);
 }
 void C_Rectangle::load(FILE* from)
 {
