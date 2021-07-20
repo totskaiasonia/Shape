@@ -7,7 +7,8 @@ public:
     C_Rectangle();
     C_Rectangle(float pos_x, float pos_y, float square, char name, float side_length, float height);
 
-    //void save(FILE* pf) override;
+    void save(FILE* to) override;
+    void load(FILE* from) override;
 
     friend std::ostream& operator <<(std::ostream& out, const C_Rectangle& figure)
     {

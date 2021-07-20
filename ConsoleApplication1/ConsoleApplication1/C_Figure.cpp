@@ -55,14 +55,14 @@ void C_Figure::load(FILE* from)
 	if (from != nullptr)
 	{
 		char* tmp = new char[20];
-
-		this->name = (fgets(tmp, 20, from))[0];
+		this->name = fgetc(from);
+		fgets(tmp, 20, from);
 		this->pos_x = atoi(fgets(tmp, 20, from));
 		this->pos_y = atoi(fgets(tmp, 20, from));
-		this->square = atoi(fgets(tmp, 20, from));
+		this->square = atof(fgets(tmp, 20, from));
 	}
 }
 C_Figure::~C_Figure()
 {
-
+	
 }

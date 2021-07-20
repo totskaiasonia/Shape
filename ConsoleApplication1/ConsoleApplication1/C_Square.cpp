@@ -28,12 +28,10 @@ void C_Square::save(FILE* to)
 
 	_itoa_s(fr_part, tmp, 100, 10);
 	fputs(tmp, to);
-
-	rewind(to);
 }
 void C_Square::load(FILE* from)
 {
 	C_Figure::load(from);
 	char* tmp = new char[20];
-	this->side_length = atoi(fgets(tmp, 20, from));
+	this->side_length = atof(fgets(tmp, 20, from));
 }
